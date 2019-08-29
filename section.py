@@ -1,6 +1,5 @@
 from question import Question
 
-
 class Section:
     
     def __init__ (self,sec_title,sec_description,question_list,first_question=None,qualifying_question=None,user_answers={}):
@@ -24,7 +23,7 @@ def run_section(self):
             question.get_user_answer()
             question.print_user_answer()
             self.user_answers = question.keep_answers()
-        for key, value in self.user_answers:
+        for key, value in self.user_answers.items():
             print(f'your answer for {key} is {value}')
         print ('Print Thank you messgae: Thanks for your time.bala bala bala....')
         exit # how to add exit comand search for this          
